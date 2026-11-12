@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Site Restaurant</title>
+    <meta name="description" content="Test Site Restaurant — a demo website built to preview the design, menu layout, and content structure before launch." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://www.wasfis.com/" />
+    <meta name="theme-color" content="#f7f2ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#171611" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta property="og:site_name" content="Test Site Restaurant" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Test Site Restaurant" />
+    <meta property="og:description" content="Demo website preview — design, menu layout, and content structure." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.wasfis.com/" />
+    <meta property="og:image" content="https://www.wasfis.com/assets/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Test Site Restaurant demo website preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Test Site Restaurant" />
+    <meta name="twitter:description" content="Demo website preview — design, menu layout, and content structure." />
+    <meta name="twitter:image" content="https://www.wasfis.com/assets/img/og-image.jpg" />
+    <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Test Site Restaurant",
+        "url": "https://www.wasfis.com/",
+        "image": "https://www.wasfis.com/assets/img/og-image.jpg",
+        "telephone": "+1-713-782-1789",
+        "email": "management@wasfis.com",
+        "priceRange": "$$",
+        "servesCuisine": ["Mediterranean", "Middle Eastern", "Lebanese"],
+        "menu": "https://www.wasfis.com/menu.html",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6110 Richmond Avenue",
+          "addressLocality": "Houston",
+          "addressRegion": "TX",
+          "postalCode": "77057",
+          "addressCountry": "US"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "11:00",
+            "closes": "01:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a href="index.html" class="brand" aria-label="Test Site Restaurant home" aria-current="page">
+          <span class="brand-mark">W</span>
+          <span class="brand-name">Test Site Restaurant</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="menu.html">Menu</a>
+          <a href="#specials">Specials</a>
+          <a href="#catering-events">Catering & Events</a>
+          <a href="#visit-contact">Visit</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">☾</button>
+          <button class="mobile-nav-toggle icon-button" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
+          <a class="button accent" href="menu.html">Browse Menu</a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="container" hidden data-mobile-nav>
+        <nav class="main-nav" aria-label="Mobile navigation" style="display:grid; gap:0.8rem; padding:0.75rem 0 1.2rem;">
+          <a href="menu.html">Menu</a>
+          <a href="#specials">Specials</a>
+          <a href="#catering-events">Catering & Events</a>
+          <a href="#visit-contact">Visit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section">
+        <div class="container hero-inner">
+          <div>
+            <span class="eyebrow">Houston, Texas</span>
+            <h1>Mediterranean taste. Good company.</h1>
+            <p>Fresh mezza, grilled favorites, and warm dining in Houston.</p>
+            <div class="hero-actions">
+              <a class="button" href="menu.html">Browse menu</a>
+              <a class="ghost-button" href="#visit-contact">Plan a visit</a>
+            </div>
+          </div>
+
+          <div class="hero-media" aria-label="Restaurant interior and food presentation">
+            <div class="hero-photo" role="img" aria-label="Mediterranean dining and grilled plates at a restaurant"></div>
+            <div class="hero-badge">
+              <span>House favorite</span>
+              <strong>Mixed Kabob</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Great for sharing</span>
+              <h2>Simple dishes. A relaxed table.</h2>
+            </div>
+            <p>Fresh flavors, shareable plates, and easy Houston dining.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="feature-card">
+              <div class="feature-visual" aria-hidden="true"></div>
+              <h3>Open and social</h3>
+              <p>Easy lunches, family dinners, and late-night gatherings in a welcoming space.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-visual" aria-hidden="true"></div>
+              <h3>Charcoal flavor</h3>
+              <p>Classic grill techniques, bright sides, and a balanced Mediterranean profile.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-visual" aria-hidden="true"></div>
+              <h3>Easy to revisit</h3>
+              <p>Comfortable favorites that invite a second visit, group dinner, or quick bite.</p>
+            </article>
+          </div>
+
+          <div class="menu-feature" aria-label="Popular categories">
+            <article class="category-card">
+              <div class="chip">Mezza</div>
+              <h3>Fresh dips & small plates</h3>
+              <a class="small-button" href="menu.html">View</a>
+            </article>
+            <article class="category-card">
+              <div class="chip">Grill</div>
+              <h3>Charcoal favorites</h3>
+              <a class="small-button" href="menu.html">View</a>
+            </article>
+            <article class="category-card">
+              <div class="chip">Shawarma</div>
+              <h3>Sandwiches & wraps</h3>
+              <a class="small-button" href="menu.html">View</a>
+            </article>
+            <article class="category-card">
+              <div class="chip">Desserts</div>
+              <h3>Sweet finish</h3>
+              <a class="small-button" href="menu.html">View</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="specials">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Weekly specials</span>
+              <h2>Each day brings a different plate.</h2>
+            </div>
+            <p>Availability should be confirmed before ordering, as daily dishes may vary.</p>
+          </div>
+
+          <div class="specials-layout">
+            <div class="day-switcher" aria-label="Specials by day">
+              <button class="filter-chip" type="button" data-day-button="Monday" aria-pressed="false">Monday</button>
+              <button class="filter-chip" type="button" data-day-button="Tuesday" aria-pressed="false">Tuesday</button>
+              <button class="filter-chip" type="button" data-day-button="Wednesday" aria-pressed="false">Wednesday</button>
+              <button class="filter-chip" type="button" data-day-button="Thursday" aria-pressed="false">Thursday</button>
+              <button class="filter-chip" type="button" data-day-button="Friday" aria-pressed="false">Friday</button>
+              <button class="filter-chip" type="button" data-day-button="Saturday" aria-pressed="false">Saturday</button>
+              <button class="filter-chip" type="button" data-day-button="Sunday" aria-pressed="false">Sunday</button>
+            </div>
+
+            <article class="special-content" data-special-card>
+              <span class="eyebrow" data-special-day>Tuesday</span>
+              <h3 class="special-name" data-special-name>Mouloukhiya</h3>
+              <div class="special-meta">
+                <span>Seasonal special</span>
+                <span class="special-price" data-special-price>$16.95</span>
+              </div>
+              <p data-special-description>One of the restaurant's signature traditions; please verify availability before visiting.</p>
+              <div class="notice warning" data-special-note style="margin-top: 1rem;">Please confirm availability before visiting.</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="catering-events">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Hosting</span>
+              <h2>Catering and private gatherings.</h2>
+            </div>
+            <p>Small-group menus and private dining planning can be coordinated by phone or email.</p>
+          </div>
+
+          <div class="events-grid">
+            <article class="catering-card">
+              <h3>Catering</h3>
+              <p>For office lunches, family events, and group dining, contact the restaurant directly for current availability and planning details.</p>
+              <div class="inline-list">
+                <a href="tel:+17137821789">Call: 713-782-1789</a>
+                <a href="mailto:management@wasfis.com">Email: management@wasfis.com</a>
+              </div>
+            </article>
+            <article class="catering-card">
+              <h3>Private Gatherings</h3>
+              <p>For a relaxed dinner or a larger hospitality request, speak with the team about availability and event needs before confirming plans.</p>
+              <div class="inline-list">
+                <a href="tel:+17137821789">Reserve by phone</a>
+                <a href="https://maps.google.com/?q=6110+Richmond+Avenue+Houston+TX+77057" target="_blank" rel="noreferrer">View directions</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="visit-contact">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Visit</span>
+              <h2>Find us in Houston.</h2>
+            </div>
+            <p>Visit the restaurant for lunch, dinner, or late-night dining and speak with the team directly.</p>
+          </div>
+
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>Test Site Restaurant</h3>
+              <p>Your address goes here</p>
+              <div class="contact-list">
+                <a href="tel:+17137821789"><span>Call</span><strong>713-782-1789</strong></a>
+                <a href="mailto:management@wasfis.com"><span>Email</span><strong>management@wasfis.com</strong></a>
+                <a href="https://maps.google.com/?q=6110+Richmond+Avenue+Houston+TX+77057" target="_blank" rel="noreferrer"><span>Map</span><strong>Open route</strong></a>
+              </div>
+            </article>
+
+            <article class="contact-card">
+              <h3>Hours</h3>
+              <p>Open daily, 11 AM–1 AM</p>
+              <div class="contact-list">
+                <a href="tel:+17137821789">Phone reservations</a>
+                <a href="https://www.wasfis.com/" target="_blank" rel="noreferrer">Official site</a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2026 Test Site Restaurant</div>
+        <div class="footer-links">
+          <a href="menu.html">Menu</a>
+          <a href="#specials">Specials</a>
+          <a href="#catering-events">Catering</a>
+          <a href="#visit-contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="selection-toggle button" type="button" data-toggle-selection aria-label="Open My Selection">
+      <span>My Selection</span>
+      <span class="selection-badge" data-selection-badge>0</span>
+    </button>
+
+    <aside class="selection-panel" data-selection-panel aria-label="My Selection panel">
+      <div class="selection-header">
+        <h3>My Selection</h3>
+        <button class="icon-button" type="button" aria-label="Close selection panel" data-close-selection>✕</button>
+      </div>
+      <div class="selection-body">
+        <div data-selection-list class="selection-list"></div>
+        <div class="selection-total">
+          <span>Total</span>
+          <span data-selection-total>$0.00</span>
+        </div>
+        <p class="selection-footnote">Your selection is not a placed order. Prices are subject to confirmation. Taxes and fees are not included.</p>
+        <div class="notice info" data-copy-status>Copy the list for a quick review before calling the restaurant.</div>
+      </div>
+      <div class="selection-footer">
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+          <button class="button secondary" type="button" data-copy-selection>Copy list</button>
+          <button class="ghost-button" type="button" data-clear-selection>Clear</button>
+        </div>
+        <textarea data-selection-fallback hidden aria-label="Selection text fallback" style="width:100%; margin-top:0.8rem; min-height:100px; border-radius:12px; border:1px solid var(--line); background:var(--surface-strong); color:var(--text); padding:0.75rem;"></textarea>
+      </div>
+    </aside>
+
+    <script src="config.js"></script>
+    <script src="menu-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

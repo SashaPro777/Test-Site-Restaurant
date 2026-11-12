@@ -1,0 +1,23 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# Logs and temp
+*.log
+*.tmp
+
+# Dependencies (проєкт статичний, але на випадок локальних інструментів)
+node_modules/
+package-lock.json
+
+# Хостинг-службові дані (не комітимо стан акаунтів)
+.netlify/
+.vercel/
+
+# Локальні архіви для деплою
+deploy/
+*.zip

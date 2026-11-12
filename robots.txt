@@ -1,0 +1,10 @@
+# Test Site Restaurant — demo/preview build.
+# Індексацію вимкнено, поки сайт тестовий.
+# Після запуску продакшну замініть вміст на:
+#   User-agent: *
+#   Allow: /
+#   Disallow: /404.html
+#   Sitemap: https://www.wasfis.com/sitemap.xml
+
+User-agent: *
+Disallow: /
