@@ -14,6 +14,36 @@
 - Сума форматується з розділювачем тисяч (`$5,615.70`) через `Intl.NumberFormat`, цифри табличні, без переносу рядка.
 - Шрифт у меню зроблено виразнішим і ширшим: назви страв — Manrope 800, 1.32rem, додатний міжлітерний інтервал; описи — 1rem з інтервалом 0.012em; ціни — 800 з табличними цифрами.
 
+## Git і деплой
+
+Локальний репозиторій уже створений (гілка `main`, перший коміт `ad25a45`). Залишилось підключити віддалений репозиторій і хостинг — для цього потрібна авторизація акаунта.
+
+### GitHub
+
+```bash
+# 1. Створіть репозиторій на github.com (без README, без .gitignore)
+# 2. Підключіть і запуште:
+git remote add origin https://github.com/SashaPro777/<repo-name>.git
+git push -u origin main
+```
+
+Або через GitHub CLI: `gh auth login`, далі `gh repo create <repo-name> --public --source=. --push`.
+
+### Netlify
+
+- Варіант А (drag-and-drop): перетягніть `deploy/wasfi-test-site.zip` або папку проєкту на https://app.netlify.com/drop.
+- Варіант Б (з репозиторію): New site → Import from GitHub → build command порожня, publish directory `.`; `netlify.toml` підхопить заголовки, кеш і 404.
+- Варіант В (CLI): `npm i -g netlify-cli`, `netlify login`, `netlify deploy --prod --dir .`.
+
+### Vercel
+
+- Імпорт репозиторію на https://vercel.com/new, framework preset — Other, build command порожня, output directory `.`; `vercel.json` застосується автоматично.
+- Або CLI: `npm i -g vercel`, `vercel login`, `vercel --prod`.
+
+### Apache / cPanel
+
+Завантажте вміст `deploy/wasfi-test-site.zip` у `public_html` і розпакуйте. `.htaccess` уже всередині.
+
 ## Зміст проєкту
 - `index.html` — головна сторінка з героєм, розділом про ресторан, specials, catering і контактами.
 - `menu.html` — окрема сторінка меню з пошуком, категоріями, деталями страв і My Selection.
