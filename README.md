@@ -1,6 +1,23 @@
-# Wasfi's Grill & Hookah — прототип сайту
+# Test Site Restaurant — статичний сайт-прототип
 
-Це статичний сайт ресторану, який можна відкривати локально, редагувати вручну та розгортати на будь-якому статичному хостингу без прив'язки до особистого акаунта розробника.
+Демонстраційний статичний сайт ресторану (медітерранська кухня, Х'юстон, TX). Відкривається локально, редагується вручну та розгортається на будь-якому статичному хостингу без прив'язки до особистого акаунта розробника.
+
+> **Test Site Restaurant** — це тестовий сайт. Страви, ціни, фото й години роботи є заглушками для попереднього перегляду дизайну.
+
+## Про проєкт
+
+**Test Site Restaurant** — демонстраційний сайт ресторану середземноморської кухні, зібраний як статичний прототип без бекенду, збірки та залежностей. Мета — показати замовнику дизайн, структуру сторінок і поведінку інтерфейсу до запуску продакшн-версії.
+
+Що є на сайті:
+
+- **Головна** (`index.html`) — герой-блок, розповідь про ресторан, daily specials за днями тижня, catering, контакти й карта.
+- **Меню** (`menu.html`) — пошук по стравах, фільтр за категоріями (Mezza, Sandwiches & Shawarma, Grill), картки з фото, цінами й описами, модальне вікно з деталями страви.
+- **My Selection** — кошик для перегляду обраного: кількість, підсумок, копіювання списку, збереження в `localStorage`.
+- **Теми** — світла, темна та системна, з перемикачем і збереженням вибору.
+- **404** (`404.html`) — власна сторінка помилки.
+- **Доступність** — семантична розмітка, `aria`-атрибути, керування з клавіатури, `prefers-reduced-motion`.
+
+Технічно це HTML, CSS і vanilla JavaScript: без фреймворків, без npm-залежностей, без етапу збірки. Контент винесено в `config.js` (контакти, теми, соцмережі) і `menu-data.js` (страви та specials), тому тексти й ціни редагуються без правок розмітки.
 
 ## Статус: тестовий сайт
 
@@ -17,6 +34,37 @@
 ## Git і деплой
 
 Локальний репозиторій уже створений (гілка `main`, перший коміт `ad25a45`). Залишилось підключити віддалений репозиторій і хостинг — для цього потрібна авторизація акаунта.
+
+### Опис репозиторію на GitHub
+
+Короткий опис (поле **Description**, ліміт 350 символів) — готовий до вставки:
+
+```text
+Test Site Restaurant — demo static site for a Mediterranean restaurant: searchable menu with a My Selection panel, dark/light theme, local WebP imagery and SEO metadata. HTML, CSS and vanilla JS, no build step.
+```
+
+Теми (**Topics**):
+
+```text
+static-site, restaurant-website, html-css-javascript, vanilla-js, demo-site, menu, responsive-design, dark-mode, netlify, vercel, github-pages, seo
+```
+
+Застосувати через GitHub CLI:
+
+```bash
+gh repo edit SashaPro777/wasfi-test-site \
+  --description "Test Site Restaurant — demo static site for a Mediterranean restaurant: searchable menu with a My Selection panel, dark/light theme, local WebP imagery and SEO metadata. HTML, CSS and vanilla JS, no build step." \
+  --add-topic static-site,restaurant-website,html-css-javascript,vanilla-js,demo-site,menu,responsive-design,dark-mode,netlify,vercel,github-pages,seo
+```
+
+Або через REST API (потрібен токен зі scope `repo`):
+
+```bash
+curl -X PATCH https://api.github.com/repos/SashaPro777/wasfi-test-site \
+  -H "Authorization: Bearer $GITHUB_TOKEN" \
+  -H "Accept: application/vnd.github+json" \
+  -d '{"description":"Test Site Restaurant — demo static site for a Mediterranean restaurant: searchable menu with a My Selection panel, dark/light theme, local WebP imagery and SEO metadata. HTML, CSS and vanilla JS, no build step.","homepage":"https://www.wasfis.com"}'
+```
 
 ### GitHub
 
